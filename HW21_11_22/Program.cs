@@ -7,11 +7,29 @@
 
 
 Console.Write("Ваше число \n:");
-int n = Math.Abs(Convert.ToInt32(Console.ReadLine()));
-int count = 1;
-while (count <= n)
+int n = Convert.ToInt32(Console.ReadLine());
+
+if (n > 0)
 {
-    int res = count*count*count; // ну или:  res = Math.Pow(count, 3);
+    int count = 1;
+    while (count <= n)
+    {
+    int res = count*count*count; // ну или :  res = Math.Pow(count, 3);
     count++;
     Console.Write($"{res}, ");
+    }
 } 
+else if (n < 0)
+{
+    int count = (-1);
+    while (count >= n)
+    {
+    int res = count*count*count; // ну или :  res = Math.Pow(count, 3);
+    count = count+(-1);
+    Console.Write($"{res}, ");
+    }
+} 
+else 
+{
+    Console.WriteLine("что то не так");
+}
